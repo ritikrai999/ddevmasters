@@ -34,7 +34,8 @@ app.set('view engine','ejs');
     resave: true
 }));
 
-app.use(flash());
+app.use(flash()); 
+//rrr
 
 //global vars for messages for views
 app.use((req,res,next)=>{
