@@ -10,7 +10,7 @@ const session=require('express-session')
 const flash=require('connect-flash')
 const authenticate=require('./middleware/authenticate')
 
-port=process.env.PORT;
+port=3000;
 app=express();
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
@@ -34,8 +34,7 @@ app.set('view engine','ejs');
     resave: true
 }));
 
-app.use(flash()); 
-//rrr
+app.use(flash());
 
 //global vars for messages for views
 app.use((req,res,next)=>{
@@ -51,7 +50,6 @@ app.use(passport.initialize());
 
 app.use('/users',userRouter);
 app.use('/hospitals',hospitalRouter);
-
 app.get('/',authenticate.setAuthenticatedUser,(req,res)=>{
     res.render('home',{title:"Home"});
 })

@@ -1,7 +1,7 @@
 {
-  "name": "vaccine-distribution",
+  "name": "sanskar",
   "version": "1.0.0",
-  "description": "",
+  "description": "TO Setup:- run command: 1) npm i (to install npm packages).",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
